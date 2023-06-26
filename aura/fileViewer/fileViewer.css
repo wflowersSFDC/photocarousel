@@ -1,0 +1,19 @@
+.THIS 
+    .container {
+        overflow-x: auto;
+        white-space: nowrap;
+    
+}
+
+.THIS .slds-file--card {
+    background:none;
+    border:none;
+    text-align: center;
+}
+
+.THIS a::before {
+    display:none;
+    color:transparent !important;
+    text-decoration:none !important;
+    background-color:transparent !important;
+}

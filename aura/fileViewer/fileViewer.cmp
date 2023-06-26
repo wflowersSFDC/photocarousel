@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="photoGetter">
+    <aura:attribute name="photoIds" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.loadPhotos}"/>
+    <aura:handler event="forceChatter:postCreated" action="{!c.loadPhotos}"/>
+    <aura:if isTrue="{!v.photoIds}">
+        <div class="container" >
+            <div class="slds-grid slds-gutters container">
+                <aura:iteration items="{!v.photoIds}" var="p">
+                    <div class="slds-col">
+                        	<lightning:fileCard fileId="{!p}" hideDescription="true"/>
+                    </div>
+                </aura:iteration>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>
