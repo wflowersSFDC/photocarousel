@@ -1,0 +1,1 @@
+A very rudimentary aura component that displays jpegs that are attached to a Salesforce object
